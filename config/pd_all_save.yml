@@ -1,0 +1,54 @@
+
+general:
+  save_dir: "./pretrained_models/"
+  folder: "pd_vae_all"
+  device: "cuda"
+  seed: 42
+  num_workers: 0
+  log_dir: "pd_logs"
+  progress_bar: True
+  n_samples_each_class: 1
+  max_images: null
+  callback_every: 1
+  callback_digits: False
+  sweeping_stepsize: 1
+  show_probs: False
+
+dataset:
+  dataset: "pd_all_save"
+  include_classes: [0,1]
+
+classifier:
+  classifier: "linClassifier"
+  model_name: "pd_all"
+  save_classifier: True
+  epochs: 50
+  batch_size: 8
+  lr: 0.0005
+# set for logistic regression
+  b1: 0.9
+  b2: 0.999
+  weight_decay: 0.005
+# set for vae
+#  b1: 0.6
+#  b2: 0.999
+#  weight_decay: 0.01
+  optimizer: "AdamW"
+  no_print: True
+  n_features: 70
+  l1_lambda: 0.000
+
+vae:
+  vae_model: "vanilla_Encoder"
+  use_causal: True
+  n_alpha: 1
+  n_beta: 5
+  alpha_samples: 200
+  beta_samples: 200
+  lam_ml: 0.068
+  batch_size: 8
+  n_features: 70
+  save_vae: True
+  save_losses: True
+  encoder_path : './pretrained_models/pd_vae_all/Run1/pd_all_encoder_best_K1_L4_lamb0.018_causal-0.5665.pt'
+  decoder_path : './pretrained_models/pd_vae_all/Run1/pd_all_decoder_best_K1_L4_lamb0.018_causal-0.5665.pt'

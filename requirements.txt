@@ -1,0 +1,18 @@
+# Python dependencies for the GCE codebase (pip).
+# For a conda setup, use environment.yml instead.
+# Version floors reflect the environment used for the paper; newer versions
+# are generally fine. Install PyTorch per https://pytorch.org for your CUDA setup.
+numpy>=1.26
+pandas>=2.0
+scipy>=1.11
+scikit-learn>=1.3
+matplotlib>=3.7
+seaborn>=0.12
+statsmodels>=0.14
+torch>=2.0
+captum>=0.7
+dcor>=0.6
+h5py>=3.8
+openpyxl>=3.1
+tensorboard>=2.13
+PyYAML>=6.0

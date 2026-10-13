@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+.ruff_cache/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Editors / OS
+.idea/
+.vscode/
+.DS_Store
+
+# Data, models and outputs are not distributed (see Data availability)
+datasets/
+pretrained_models/
+working_plots/
+pd_logs/
+runs/
+analysis/*/
+*.csv
+*.xlsx
+*.mat
+*.npz
+*.npy
+*.pt
+*.png
+*.svg
+*.pdf
+
+# Documentation: only the README is tracked
+*.md
+!README.md
